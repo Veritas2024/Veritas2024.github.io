@@ -183,22 +183,24 @@
 
         <div class="paper" id="CSRv2">
         | <a href="javascript:toggleblock('CSRv2_abs')">abstract</a> |
-        <a href="https://openreview.net/pdf?id=UspMJlGusi">paper</a> |
+        <a href="https://arxiv.org/abs/2602.05735">paper</a> |
         <a href="https://github.com/Y-Research-SBU/CSRv2">code</a> |
         <a href="https://y-research-sbu.github.io/CSRv2/">project page</a> |
 
         <p align="justify">
             <i id="CSRv2_abs">
-              In the era of large foundation models, the quality of embeddings has become a central determinant of downstream task performance and overall system capability. 
-              Yet widely used dense embeddings are often extremely high-dimensional (e.g., 4096), incurring substantial costs in storage, memory, and inference latency. 
-              To address these, Contrastive Sparse Representation (CSR) is recently proposed as a promising direction, mapping dense embeddings into high-dimensional but $k$-sparse vectors, in contrast to compact dense embeddings such as Matryoshka Representation Learning (MRL). 
-              Despite its promise, CSR suffers severe degradation in the ultra-sparse regime (e.g., $k \leq 4$), where over 80\% of neurons remain inactive, leaving much of its efficiency potential unrealized.
-              In this paper, we introduce \textbf{CSRv2}, a principled training approach designed to make ultra-sparse embeddings viable. 
-              CSRv2 stabilizes sparsity learning through progressive $k$-annealing, enhances representational quality via supervised contrastive objectives, and ensures end-to-end adaptability with full backbone finetuning. 
-              CSRv2 reduces dead neurons from 80\% to 20\% and delivers a 14\% accuracy gain at $k=2$, bringing ultra-sparse embeddings on par with CSR at $k=8$ and MRL at 32 dimensions, \textit{all with only two active features}. 
-              While maintaining comparable performance, CSRv2 delivers a {7$\times$ speedup over MRL}, and yields up to \textbf{300$\times$ improvements in compute and memory efficiency} relative to dense embeddings.
-              Extensive experiments across text (MTEB, multiple state-of-the-art LLM embeddings (Qwen and e5-Mistral-7B)) and vision (ImageNet-1k) demonstrate that CSRv2 makes ultra-sparse embeddings practical without compromising performance. 
-              By making extreme sparsity viable, CSRv2 broadens the design space for large-scale, real-time, and edge-deployable AI systems where both embedding quality and efficiency are critical.
+              In the era of large foundation models, the quality of embeddings has become a
+              central determinant of downstream task performance and overall system capability. Yet widely used dense embeddings are often extremely high-dimensional
+              (e.g., 4096), incurring substantial costs in storage, memory, and inference latency.
+              To address these, Contrastive Sparse Representation (CSR) is recently proposed
+              as a promising direction, mapping dense embeddings into high-dimensional butk-sparse vectors, in contrast to compact dense embeddings such as Matryoshka
+              Representation Learning (MRL). Despite its promise, CSR suffers severe degradation in the ultra-sparse regime (e.g., k ≤ 4), where over 80% of neurons remain inactive, leaving much of its efficiency potential unrealized. In this paper, we introduce CSRv2, a principled training approach designed to make ultrasparse embeddings viable. CSRv2 stabilizes sparsity learning through progressivek-annealing, enhances representational quality via supervised contrastive objectives, and ensures end-to-end adaptability with full backbone finetuning. CSRv2
+              reduces dead neurons from 80% to 20% and delivers a 14% accuracy gain at k = 2, bringing ultra-sparse embeddings on par with CSR at k = 8 and MRL
+              at 32 dimensions, all with only two active features. While maintaining comparable performance, CSRv2 delivers a 7× speedup over MRL, and yields up to 300× improvements in compute and memory efficiency relative to dense embeddings in e5-mistral-7b-instruct-based text representation. Extensive experiments across text (MTEB, multiple state-of-the-art LLM embeddings (Qwen and
+              e5-Mistral-7B), SPLADEv3, GraphRAG) and vision (ImageNet-1k) demonstrate
+              that CSRv2 makes ultra-sparse embeddings practical without compromising performance, where CSRv2 achieves 7%/4% improvement over CSR when k = 4 and further increases this gap to 14%/6% when k = 2 in text/vision representation.
+              By making extreme sparsity viable, CSRv2 broadens the design space for largescale, real-time, and edge-deployable AI systems where both embedding quality
+              and efficiency are critical.
             </i>
         </p>
 
