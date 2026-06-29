@@ -76,18 +76,18 @@
   </p>
 
   <tr>
-    <td width="45%" valign="top"><a href="./img/my_pic.png"><img src="./img/my_pic.png" width="100%" style="border-radius:15px"></a>
-        <p align=center>
-          <a href="https://scholar.google.com/citations?user=v9o-jncAAAAJ">Google Scholar</a> &nbsp|&nbsp
-          <a href="https://github.com/Veritas2024">Github</a> &nbsp|&nbsp
-          <a href="mailto:glixuan6@gmail.com">Email</a> &nbsp|&nbsp
-          <a href="./img/Wechat.png">Wechat</a> 
+    <td width="35%" valign="top"><a href="./img/my_pic.png"><img src="./img/my_pic.png" width="100%" style="border-radius:15px"></a>
+      <p align="center" style="font-size:14px; white-space:nowrap; margin-top:8px;">
+        <a href="https://scholar.google.com/citations?user=v9o-jncAAAAJ">Google Scholar</a> &nbsp;|&nbsp;
+        <a href="https://github.com/Veritas2024">Github</a> &nbsp;|&nbsp;
+        <a href="mailto:glixuan6@gmail.com">Email</a> &nbsp;|&nbsp;
+        <a href="./img/Wechat.png">Wechat</a>
       </p>
     </td>
 
-    <td width="55%" valign="top" align="justify">
+    <td width="65%" valign="top" align="justify">
         <p>
-        Hello! I’m Lixuan Guo, a third-year undergraduate in Computer Science at <a href="https://en.xidian.edu.cn/">Xidian University</a>. I am currently a research intern at Stony Brook University, advised by Prof. <a href="https://chenyuyou.me">Chenyu You</a>, and I also collaborate closely with <a href="https://yifeiwang77.com">Yifei Wang</a> and Prof. <a href="https://people.csail.mit.edu/stefje">Stefanie Jegelka</a>.
+        Hello! I’m a third-year undergraduate in Computer Science at <a href="https://en.xidian.edu.cn/">Xidian University</a>. I am currently a research intern at Stony Brook University, advised by Prof. <a href="https://chenyuyou.me">Chenyu You</a>, and I also collaborate closely with <a href="https://yifeiwang77.com">Yifei Wang</a> and Prof. <a href="https://people.csail.mit.edu/stefje">Stefanie Jegelka</a>.
         <br><br>
         My research focuses on efficient and scalable machine learning architectures for modern hardware. I’m particularly interested in sparsity, retrieval-augmented models, and Mixture-of-Experts routing, as well as bottlenecks in quantization and deployment. I also study how these systems fail under distribution shift and adversarial pressure, including jailbreaks and context degradation.
         <br><br>
@@ -161,7 +161,8 @@
   <tr><td>
     <sectionheading>&nbsp;&nbsp;News</sectionheading>
     <ul>
-      <li> [01/2026] One paper on <a href="https://openreview.net/forum?id=CTpQW4yMUL">ultra-sparse embedding</a> accepted at ICLR26. </li>
+      <li> [05/2026] One paper on <a href="https://arxiv.org/abs/2605.30120">single-stage multi-vector retrieval</a> accepted at ICML26. </li>
+      <li> [01/2026] One paper on <a href="https://arxiv.org/abs/2602.05735">ultra-sparse embedding</a> accepted at ICLR26. </li>
       <li> [10/2025] CSRv2 is out. Let's explore ultra sparsity together! </li>
     </ul>
   </td></tr>
@@ -170,6 +171,57 @@
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
   <tr><td><sectionheading>&nbsp;&nbsp;Publications</sectionheading></td></tr>
 </table>
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+
+  <tr>
+    <td width="33%" valign="top" align="center">
+        <a href="#">
+        <img src="img/SSR.png" alt="sym" width="300" height="200" style="border-radius:15px">
+        <!-- <video autoplay loop muted playsinline width="300" height="300" style="border-radius:1px">
+          <source src="./teaser-thumbnail_sdfusion.mp4" type="video/mp4">
+        </video> -->
+        </a>
+    </td>
+
+    <td width="67%" valign="top">
+        <p>
+            <heading>No More K-means: Single-Stage Sparse Coding for Efficient Multi-Vector Retrieval</heading></a>
+            <br>
+            <b>Lixuan Guo</b><sup>*</sup>,
+            Yifei Wang<sup>*</sup>,
+            Tiansheng Wen,
+            Aosong Feng,
+            Stefanie Jegelka,
+            Chenyu You
+            <br>
+            <em>ICML</em>, 2026
+        </p>
+
+        <div class="paper" id="SSR">
+        | <a href="javascript:toggleblock('SSR_abs')">abstract</a> |
+        <a href="https://arxiv.org/abs/2605.30120">paper</a> |
+        <a href="https://github.com/Y-Research-SBU/SSR">code</a> |
+        <a href="https://y-research-sbu.github.io/SSR/">project page</a> |
+
+        <p align="justify">
+            <i id="SSR_abs">
+              Multi-vector retrieval (MVR) models, exemplified by ColBERT, have established new benchmarks in retrieval accuracy by preserving fine-grained token-level interactions. However, 
+              this granularity imposes prohibitive storage and retrieval efficiency bottlenecks: to manage the immense memory footprint and computational overhead of billion-scale token vectors, 
+              state-of-the-art systems are forced to rely on aggressive dimension reduction and complex clustering (e.g., K-means). This compromise introduces two critical limitations: excessive 
+              indexing latency of clustering large-scale corpora and semantic information loss inherent to compression. In this paper, we propose Single-stage Sparse Retrieval (SSR}, a paradigm 
+              shift that replaces expensive clustering with efficient sparse coding. Instead of compressing features into low-dimensional dense vectors, we utilize Sparse Autoencoder (SAE) to 
+              project token embeddings into a high-dimensional but highly sparse representation. This transformation enables us to bypass vector clustering entirely and leverage inverted indexing 
+              for precise, high-throughput retrieval. Extensive experiments on the BEIR benchmark demonstrate that SSR achieves a "trifecta" of improvements: it reduces indexing time by 15x compared 
+              to ColBERTv2, halves retrieval latency, and simultaneously improves retrieval performance over leading baselines.
+            </i>
+        </p>
+
+        </div>
+    </td>
+  </tr>
+</table>
+
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
 
   <tr>
@@ -325,7 +377,7 @@
     <td>
       <sectionheading>&nbsp;&nbsp;Professional Activity</sectionheading>
         <ul>
-          <li> Journal Reviewer: Nature Communications, TPAMI, Pattern Recognition, TNNLS, MedIA, TMI</li>
+          <li> Journal Reviewer: Nature Machine Intelligence, Nature Communications, TPAMI, Pattern Recognition, TNNLS, MedIA, TMI</li>
         </ul>
     </td>
   </tr>
@@ -336,7 +388,8 @@
     <td>
       <sectionheading>&nbsp;&nbsp;Selected Honors & Awards</sectionheading>
         <ul>
-          <li> [05/2025] International Collegiate Programming Contest (ICPC) <b> Provincial Bronze Award</b></li>
+          <li> [10/2025] IEEE Extreme Programming Competition <b>Top 0.3%</b>.</li>
+          <li> [05/2025] International Collegiate Programming Contest (ICPC) <b> Provincial Bronze Award</b>.</li>
           <li> [02/2025] US College Mathematics Modeling Competition (MCM) <b>Finalist Award (Top 1%)</b>. </li>
           <li> [11/2024] National Mathematical Competition for College Students <b>Provincial First Prize</b>. </li>
           <li> [07/2024] Awarded <b>Second-Class</b> Undergraduate Scholarship in Xidian University. </li>
@@ -358,6 +411,8 @@
 </table>
 
 <script xml:space="preserve" language="JavaScript">
+  hideblock('SSR_abs');
+
   hideblock('CSRv2_abs');
   
   hideblock('scZGCL_intro');
